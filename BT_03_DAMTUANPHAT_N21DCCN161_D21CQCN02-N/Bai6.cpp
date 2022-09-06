@@ -2,31 +2,38 @@
 
 using namespace std;
 
+bool isPrimeNumber(int n) {
+    if (n < 2){
+        return false;
+    }       
+     
+    for (int i = 2; i < (n - 1); i++){
+        if (n % i == 0){
+            return false;
+        }   
+    }
+     
+    return true;
+}
+
 int main() {
-    int kilowatts;
-    int unitPrice = 0;
-    cout << "Enter number of kilowatts of electricity consumed: ";
-    cin >> kilowatts;
-
-    if(kilowatts < 0) {
-        cout << "You haven't pay the electricity bill" << endl;
+    int n;
+    cout << "Enter a positive integer: ";
+    cin >> n;
+    if (n < 2 ) {
+        cout << "Invalid value, please re-enter new value" << endl;
     }
-    else if (kilowatts >= 0 && kilowatts <= 100) {
-        unitPrice = 2000;
+    else {
+        for(int i = 1; i <= n; i++) {
+            if (isPrimeNumber(i)) {
+                cout << i << " is prime number." << endl;
+            }
+            // else {
+            //     cout << i << " is not prime number." << endl;
+            // }
+        }
+        
     }
-    else if (kilowatts > 100 && kilowatts <= 200) {
-        unitPrice = 2500;
-    }
-    else if (kilowatts > 200 && kilowatts <= 300) {
-        unitPrice = 3000;
-    }
-    else if (kilowatts > 300) {
-        kilowatts = 5000;
-    }
-
-    int totalMoney = kilowatts * unitPrice;
-
-    cout << "Total money you have to pay your electricity bill is: " << totalMoney << endl;
 
     return 0;
 }

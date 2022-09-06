@@ -2,28 +2,35 @@
 
 using namespace std;
 
+int greatestCommonDivisor(int a, int b) {
+    while ( a != b)
+    {
+        if (a > b)
+            a = a - b;
+        else
+            b = b - a;
+    }
+
+    return a; // or return b; a = b
+}
+
+int LeastCommonMultiple(int a, int b) {
+    int result = greatestCommonDivisor(a, b);
+    return a * b / result;
+}
+
 int main() {
-    int workingMonths;
-    const int basicSalary = 650000;
-    float number;
-    cout << "Enter working months of employee: ";
-    cin >> workingMonths;
+    int m,n;
+    cout << "Enter two positive intergers: ";
+    cin >> m >> n;
 
-    if(workingMonths < 12) {
-        number = 1.92;
+    if ( m <= 0 || n <= 0) {
+        cout << "Invalid value, please re-enter new value!" << endl;
     }
-    else if (workingMonths >= 12 && workingMonths < 36) {
-        number = 2.34;
+    else {
+        cout << "Greatest common divisor of " << m << " and " << n << " is: " << greatestCommonDivisor(m, n) << endl;
+        cout << "Least common mltiple of " << m << " and " << n << " is: " << LeastCommonMultiple(m, n) << endl;
     }
-    else if (workingMonths >= 36 && workingMonths < 60) {
-        number = 3;
-    }
-    else if (workingMonths >= 60) {
-        number = 4.5;
-    }
-
-    float salary = number * (float)basicSalary;
-    cout << "Salary of employee: " << (int)salary << endl;
 
     return 0;
 }

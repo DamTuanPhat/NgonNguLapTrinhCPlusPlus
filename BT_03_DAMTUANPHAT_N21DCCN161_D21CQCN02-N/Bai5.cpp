@@ -3,29 +3,35 @@
 
 using namespace std;
 
+bool isPrimeNumber(int n) {
+    if (n < 2){
+        return false;
+    }       
+     
+    for (int i = 2; i < (n - 1); i++){
+        if (n % i == 0){
+            return false;
+        }   
+    }
+     
+    return true;
+}
+
 int main() {
     int n;
     cout << "Enter a positive integer: ";
     cin >> n;
-
-    bool isPrimeNumber = false;
     if (n <=0 ) {
         cout << "Invalid value, please re-enter new value" << endl;
     }
     else {
-        if ( n > 1) {
-            if ( (n-1)*(n-2) != n ) {
-                isPrimeNumber = true;
-            }
+        if (isPrimeNumber(n)) {
+            cout << n << " is prime number." << endl;
         }
+        else {
+            cout << n << " is not prime number." << endl;
+        }
+        
     }
-
-    if (isPrimeNumber) {
-        cout << n << " is prime number." << endl; 
-    }
-    else {
-        cout << n << " is not prime number." << endl;
-    }
-
     return 0;
 }

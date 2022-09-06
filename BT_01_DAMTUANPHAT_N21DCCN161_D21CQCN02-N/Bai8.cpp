@@ -11,11 +11,17 @@ int main() {
     float y2 = pow(sin(x), 2) + pow(cos(x), 2) + pow(tan(3*x), 2);
     float y3 = pow((x + 10), (x + 5));
     float y4 = 3 * exp(cos(x + 1));
-    float y5 = log(x + 100);
+    
     cout << "y1 = " << y1 << endl;
     cout << "y2 = " << y2 << endl;
     cout << "y3 = " << y3 << endl;
     cout << "y4 = " << y4 << endl;
-    cout << "y5 = " << y5 << endl;
+    if (x > -100) {
+        float y5 = log(x + 100);
+        cout << "y5 = " << y5 << endl;
+    }
+    else {
+        cout << "Invalid value, can't do y5 calculation." ;
+    }
     return 0;
 }
