@@ -55,5 +55,5 @@ int main() {
     xuatVTchan(arr, n);
     thanhle(arr, n);
 
-    return 0;
+    return 0;   
 }
