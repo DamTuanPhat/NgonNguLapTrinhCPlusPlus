@@ -8,12 +8,12 @@ int main() {
     cout << "Nhap kich thuoc cua ma tran vuong: ";
     cin >> N;
 
-    cout << "Nhap gia tri cho mang: ";
+    cout << "Nhap gia tri cho ma tran: ";
     for (int i = 0; i < N; i++)
         for (int j = 0; j < N; j++)
             cin >> a[i][j];
 
-    cout << "Mang da nhap vao la: " << endl;
+    cout << "Ma tran da nhap vao la: " << endl;
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < N; j++)
