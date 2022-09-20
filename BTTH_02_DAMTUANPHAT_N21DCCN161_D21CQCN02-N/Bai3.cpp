@@ -24,8 +24,10 @@ void sap_xep(int *a, int length) {
 int main() {
     const int n = 1000;
     int a[n];
+    
+    srand(time(NULL));
     for(int i = 0; i < n; i++) {
-        a[i] = rand() - (RAND_MAX/2);
+        a[i] = (rand() - rand()) % 100;
         cout << a[i] << " ";
     }
 
@@ -37,7 +39,7 @@ int main() {
         }
 
     }
-    
+    sap_xep(b, size);
     cout << endl << endl << endl << endl;
 
     for(int i = 0; i < size; i++) {
@@ -48,6 +50,7 @@ int main() {
 
     cout << "Nhap x tu ban phim: ";
     cin >> b[size++];
+    sap_xep(b, size);
     cout << endl ;
 
     cout << "Mang sau khi them phan tu: " << endl;
@@ -55,5 +58,6 @@ int main() {
         cout << b[i] << " ";
     }
 
+    delete[] a;
     return 0;
 }

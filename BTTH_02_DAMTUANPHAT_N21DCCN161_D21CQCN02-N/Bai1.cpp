@@ -1,3 +1,8 @@
+/*
+Ho va Ten: Dam Tuan Phat
+MSSV: N21DCCN161
+Lop: D21CQCN02-N
+*/
 #include<iostream>
 
 using namespace std;
