@@ -2,43 +2,32 @@
 
 using namespace std;
 
+int fibonacci(int n) {
+    if (n == 0 || n == 1) {
+        return n;
+    }
+
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
 int sumOfFibonacci(int n) {
-    if(n == 1) {
-        return 1;
+    if(n == 0 || n == 1) {
+        return n;
     }
 
-    return sumOfFibonacci(n-1) + 0;
+    return fibonacci(n) + sumOfFibonacci(n - 1);
 }
-
-int fibonacci(int n,int a0, int a1, int p, int q) {
-    if (n == 0) {
-        return a0;
-    }else if(n == 1) {
-        return a1;
-    }
-
-    return fibonacci(n - 1, a0, a1, p, q) + fibonacci(n - 2, a0, a1, p, q);
-}
-
-
-// Chua hieu ro
 
 int main() {
-    int a0, a1, p, q, n;
-    cout << "Nhap vao n: ";
+    int n;
+    cout << "Nhap so phan tu cua day fibonacci: ";
     cin >> n;
-    cout << "Nhap vao a0: ";
-    cin >> a0;
-    cout << "Nhap vao a1: ";
-    cin >> a1;
-    cout << "Nhap vao p: ";
-    cin >> p;
-    cout << "Nhap vao q: ";
-    cin >> q;
 
+    for(int i = 0; i < n; i++) {
+        cout << fibonacci(i) << " ";
+    }
 
-
-
+    cout << endl << "Tong cua " << n << " phan tu dau la: " << sumOfFibonacci(n - 1) << endl;
     return 0;
 }
 
