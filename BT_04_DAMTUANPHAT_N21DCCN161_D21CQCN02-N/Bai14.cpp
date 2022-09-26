@@ -19,7 +19,7 @@ void daoChieu(int arr[], int n) {
 
 int fibonacci(int n) {
     if (n == 0 || n == 1) {
-        return n;
+        return 1;
     }
 
     return fibonacci(n - 1) + fibonacci(n - 2);
@@ -38,6 +38,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
+
 
     cout << endl << "Tong nghich dao cua " << n - 1 << " phan tu dau tien la: " << tongNghichDao(arr, n) << endl;
 

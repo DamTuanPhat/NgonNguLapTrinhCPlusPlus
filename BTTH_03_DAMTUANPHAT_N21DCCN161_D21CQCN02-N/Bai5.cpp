@@ -120,6 +120,5 @@ int main() {
         cout << endl << "Khong co thi sinh nao qua mon!" << endl;
     }
 
-
     return 0;
 }

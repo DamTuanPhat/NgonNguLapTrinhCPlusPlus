@@ -11,10 +11,10 @@ int factorial(int n) {
     return n*factorial(n-1);
 }
 
-int  tongNDGT(int n) {
-    int sum = 0;
+float  tongNDGT(int n) {
+    float sum = 0;
     for(int i = 1; i <= n; i++) {
-        sum += 1/factorial(i);
+        sum += 1/ (float) factorial(i);
     }
 
     return sum;

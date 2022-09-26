@@ -55,6 +55,9 @@ int main() {
     int k = trungbinh(arr, n);
     cout << "Gia tri nho nhat: " << timNhoNhat(arr, n) << endl;
     cout << "Gia tri trung binh: " << k << endl;
+
+    cout << "Nhap so can tim kiem: ";
+    cin >> k;
     if (timkiem(arr, n, k) != -1) {
         cout << "So " << k << " co xuat hien trong mang" << endl;
     }

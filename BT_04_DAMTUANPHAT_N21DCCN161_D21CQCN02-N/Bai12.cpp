@@ -20,7 +20,6 @@ int main() {
         if (count == 20) {
             break;
         }
-
         do {
             cout << "Nhap so nguyen thu " << i << " (>= 10, <= 100) :";
             cin >> arr[i];
