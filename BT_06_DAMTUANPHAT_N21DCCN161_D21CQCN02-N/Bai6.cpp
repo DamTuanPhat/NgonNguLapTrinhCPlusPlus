@@ -10,10 +10,13 @@ void countWords(char s[]) {
             count++;
         }
     }
-    cout << count;
+    cout << count << endl;
     for(int i = 0; i < strlen(s); i++) {
         if (s[i] != ' ') {
-            cout << endl << s[i];
+            cout << s[i];
+        }
+        else {
+            cout << endl;
         }
     }
 }
