@@ -64,7 +64,7 @@ int main() {
     int n;
     cout << "Nhap so diem trong mat phang: ";
     cin >> n;
-    diem arr[n];
+    diem arr[1000];
 
     for(int i = 0; i < n; i++) {
         string name;
@@ -78,7 +78,7 @@ int main() {
         arr[i].setY(y);
     }
 
-    float distanceList[n];
+    float distanceList[1000];
     for(int i = 0; i < n; i++) {
         float sumDistance = 0;
         for(int j = 0; j < n; j++) {

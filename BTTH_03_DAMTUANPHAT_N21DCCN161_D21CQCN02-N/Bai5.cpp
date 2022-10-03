@@ -90,7 +90,7 @@ int main() {
     int n;
     cout << "Nhap so luong thi sinh: ";
     cin >> n;
-    Thisinh arr[n];
+    Thisinh arr[1000];
 
     for(int i = 0; i < n; i++) {
         string strTemp;

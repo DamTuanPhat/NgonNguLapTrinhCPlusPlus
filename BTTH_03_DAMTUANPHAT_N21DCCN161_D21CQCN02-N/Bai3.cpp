@@ -1,4 +1,15 @@
-#include<iostream>
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <numeric>
+#include <map>
+#include <iomanip>
+#include <set>
 
 using namespace std;
 
@@ -58,7 +69,7 @@ int main() {
     int n;
     cout << "Nhap so luong xe cua cong ty: ";
     cin >> n;
-    Car arr[n];
+    Car arr[1000];
 
     for(int i = 0; i < n; i++) {
         string brand;

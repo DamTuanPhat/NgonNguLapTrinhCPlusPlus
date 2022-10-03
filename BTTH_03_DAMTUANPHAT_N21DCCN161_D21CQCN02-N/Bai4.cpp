@@ -86,7 +86,7 @@ int main() {
     int n;
     cout << "Nhap so luong xe cua cong ty: ";
     cin >> n;
-    Car arr[n];
+    Car arr[1000];
 
     for(int i = 0; i < n; i++) {
         string stringTemp;

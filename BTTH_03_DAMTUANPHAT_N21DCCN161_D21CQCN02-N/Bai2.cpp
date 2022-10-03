@@ -1,4 +1,15 @@
-#include<iostream>
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <numeric>
+#include <map>
+#include <iomanip>
+#include <set>
 
 using namespace std;
 
@@ -59,7 +70,7 @@ int main() {
     int weight;
     int seats;
 
-    cin.ignore(265, "\n");
+    cin.ignore(265, ' ');
     Car car1;
     cout << "Hang xe: ";
     cin >> brand;
@@ -71,7 +82,7 @@ int main() {
     car1.setWeight(weight);
     car1.setSeats(seats);
 
-    cin.ignore(265, "\n");
+    cin.ignore(265, ' ');
     Car car2;
     cout << "Hang xe: ";
     cin >> brand;
@@ -83,7 +94,7 @@ int main() {
     car2.setWeight(weight);
     car2.setSeats(seats);
 
-    cin.ignore(265, "\n");
+    cin.ignore(265, ' ');
     Car car3;
     cout << "Hang xe: ";
     cin >> brand;
