@@ -1,6 +1,15 @@
-#include<iostream>
-#include <cstdlib> // for rand() and srand()
-#include <ctime> // for time()
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <numeric>
+#include <map>
+#include <iomanip>
+#include <set>
 
 using namespace std;
 
@@ -23,15 +32,15 @@ void sap_xep(int *a, int length) {
 
 int main() {
     const int n = 1000;
-    int a[n];
+    int a[1000];
     
     srand(time(NULL));
     for(int i = 0; i < n; i++) {
-        a[i] = (rand() - rand()) % 100;
+        a[i] = (rand()) % 100;
         cout << a[i] << " ";
     }
 
-    int b[n];
+    int b[1000];
     int size = 0;
     for(int i = 0; i < n; i++) {
         if (a[i] > 0) {
@@ -40,13 +49,13 @@ int main() {
 
     }
     sap_xep(b, size);
-    cout << endl << endl << endl << endl;
+    cout << endl;
 
     for(int i = 0; i < size; i++) {
         cout << b[i] << " ";
     }
 
-    cout << endl << endl << endl << endl;
+    cout << endl;
 
     cout << "Nhap x tu ban phim: ";
     cin >> b[size++];
@@ -58,6 +67,5 @@ int main() {
         cout << b[i] << " ";
     }
 
-    delete[] a;
     return 0;
 }

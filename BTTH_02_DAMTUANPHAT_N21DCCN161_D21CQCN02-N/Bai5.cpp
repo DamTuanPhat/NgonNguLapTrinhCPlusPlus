@@ -1,10 +1,21 @@
-#include<iostream>
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <numeric>
+#include <map>
+#include <iomanip>
+#include <set>
 
 using namespace std;
 
 void check() {
     int N = 1000;
-    bool check[N + 1];
+    bool check[2000];
 
     for (int i = 2; i <= N; i++) {
         check[i] = true;
