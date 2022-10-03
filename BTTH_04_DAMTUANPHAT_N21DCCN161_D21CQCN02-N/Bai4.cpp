@@ -1,4 +1,15 @@
-#include<iostream>
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <numeric>
+#include <map>
+#include <iomanip>
+#include <set>
 
 using namespace std;
 
@@ -28,7 +39,7 @@ int main() {
     int n;
     cout << "Nhap chieu dai cua chuoi so: ";
     cin >> n;
-    So_nguyen_duong arr[n];
+    So_nguyen_duong arr[1000];
     for(int i = 0; i < n; i++) {
         unsigned int value;
         cout << "Nhap gia tri so nguyen duong thu " << i + 1 << " : ";

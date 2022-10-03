@@ -1,5 +1,15 @@
-#include<iostream>
-#include<math.h>
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <numeric>
+#include <map>
+#include <iomanip>
+#include <set>
 
 using namespace std;
 
@@ -26,16 +36,15 @@ class Diem {
         int getY() {
             return y;
         }
-        
 };
 
-class Doan_thang : public Diem {
+class DoanThang : public Diem {
     private:
         int a;
         int b;
     public: 
-        Doan_thang() {}
-        Doan_thang(int x, int y, int a, int b) : Diem(x, y) {
+        DoanThang() {}
+        DoanThang(int x, int y, int a, int b) : Diem(x, y) {
             this->a = a;
             this->b = b;
         }
@@ -76,7 +85,7 @@ class Doan_thang : public Diem {
             return sqrt(pow(a - Diem::getX(), 2) + pow(b - Diem::getY(), 2));
         }
 
-        bool songsong(Doan_thang dt) {
+        bool songsong(DoanThang dt) {
             float d1 = this->chieudai();
             float d2 = dt.chieudai();
             float VT = (d1*this->getX() - d1*this->getA())*(d2*dt.getY() - d2*dt.getB());
@@ -92,10 +101,10 @@ int main() {
     int a, b, x, y;
     cout << "Nhap toa do dt thu 1: ";
     cin >> a >> b >> x >> y;
-    Doan_thang d1(x,y,a,b);
+    DoanThang d1(x,y,a,b);
     cout << "Nhap toa do dt thu 2: ";
     cin >> a >> b >> x >> y;
-    Doan_thang d2(x,y,a,b);
+    DoanThang d2(x,y,a,b);
     
     cout << "Toa do duong thang thu 1: ";
     d1.xuat();

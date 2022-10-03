@@ -1,4 +1,15 @@
-#include<iostream>
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <numeric>
+#include <map>
+#include <iomanip>
+#include <set>
 
 using namespace std;
 
@@ -35,7 +46,7 @@ int main() {
     int n;
     cout << "Nhap so tam giac: ";
     cin >> n;
-    Tam_giac arr[n];
+    Tam_giac arr[1000];
     for(int i = 0; i < n; i++) {
         int a, b;
         cout << "Nhap chieu cao va canh day cua tam giac thu " << i + 1 << " : ";
@@ -50,8 +61,5 @@ int main() {
         cout << "Canh day: " << arr[i].getCanhday() << endl;
         cout << "Dien tich: " << arr[i].dientich() << endl << endl;
     }
-
-
-
     return 0;
 }

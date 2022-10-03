@@ -1,10 +1,21 @@
 /*
-Ho ten: Dam Tuan Phat
-MSSV: N21DCCN161
+Ho ten: Tran Vu Phuong Nam
+MSSV: N21DCCN151
 Lop: D21CQCN02-N
 */
-#include<iostream>
-#include<math.h>
+
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <numeric>
+#include <map>
+#include <iomanip>
+#include <set>
 
 using namespace std;
 
@@ -33,11 +44,11 @@ class hcn {
             return rong;
         }
 
-        int perimeter() {
+        int chuvi() {
             return (dai + rong) * 2;
         }
 
-        int area() {
+        int dientich() {
             return dai*rong;
         }
 };
@@ -52,8 +63,8 @@ int main() {
     cout << "Nhap canh cua hinh vuong: ";
     cin >> dai;
     hv hv(dai);
-    cout << "Chu vi cua hinh vuong: " << hv.perimeter() << endl;
-    cout << "Dien tich cua hinh vuong: " << hv.area() << endl;
+    cout << "Chu vi cua hinh vuong: " << hv.chuvi() << endl;
+    cout << "Dien tich cua hinh vuong: " << hv.dientich() << endl;
     
 
     return 0;
