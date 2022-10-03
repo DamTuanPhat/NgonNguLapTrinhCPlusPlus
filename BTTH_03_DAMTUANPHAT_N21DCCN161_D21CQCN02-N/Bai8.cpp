@@ -84,7 +84,6 @@ int main() {
         for(int j = 0; j < n; j++) {
             if (i != j) {
                 sumDistance += arr[i].distance(arr[j]);
-
             }
         }
         distanceList[i] = sumDistance;
