@@ -25,8 +25,6 @@ int main() {
     char s[100];
     cout << "Nhap xau: ";
     cin.getline(s, 100);
-
     countWords(s);
-
     return 0;
 }
