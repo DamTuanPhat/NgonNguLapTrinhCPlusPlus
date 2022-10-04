@@ -37,7 +37,7 @@ int thuTuNgay(NGAY n) {
         break;
     case 3:
         thuTuNgay += 31;
-        if(isNamNhuan(n.nam)) {
+        if(!isNamNhuan(n.nam)) {
             thuTuNgay += 28;
         }
         else {
@@ -46,7 +46,7 @@ int thuTuNgay(NGAY n) {
         break;
     case 4:
         thuTuNgay += 31 + 31;
-        if(isNamNhuan(n.nam)) {
+        if(!isNamNhuan(n.nam)) {
             thuTuNgay += 28;
         }
         else {
@@ -55,7 +55,7 @@ int thuTuNgay(NGAY n) {
         break;
     case 5:
         thuTuNgay += 31 + 31 + 30;
-        if(isNamNhuan(n.nam)) {
+        if(!isNamNhuan(n.nam)) {
             thuTuNgay += 28;
         }
         else {
@@ -64,7 +64,7 @@ int thuTuNgay(NGAY n) {
         break;
     case 6:
         thuTuNgay += 31 + 31 + 30 + 31;
-        if(isNamNhuan(n.nam)) {
+        if(!isNamNhuan(n.nam)) {
             thuTuNgay += 28;
         }
         else {
@@ -73,7 +73,7 @@ int thuTuNgay(NGAY n) {
         break;
     case 7:
         thuTuNgay += 31 + 31 + 30 + 31 + 30;
-        if(isNamNhuan(n.nam)) {
+        if(!isNamNhuan(n.nam)) {
             thuTuNgay += 28;
         }
         else {
@@ -82,7 +82,7 @@ int thuTuNgay(NGAY n) {
         break;
     case 8:
         thuTuNgay += 31 + 31 + 30 + 31 + 30 + 31;
-        if(isNamNhuan(n.nam)) {
+        if(!isNamNhuan(n.nam)) {
             thuTuNgay += 28;
         }
         else {
@@ -91,7 +91,7 @@ int thuTuNgay(NGAY n) {
         break;
     case 9:
         thuTuNgay += 31 + 31 + 30 + 31 + 30 + 31 + 31;
-        if(isNamNhuan(n.nam)) {
+        if(!isNamNhuan(n.nam)) {
             thuTuNgay += 28;
         }
         else {
@@ -100,7 +100,7 @@ int thuTuNgay(NGAY n) {
         break;
     case 10:
         thuTuNgay += 31 + 31 + 30 + 31 + 30 + 31 + 31 + 30;
-        if(isNamNhuan(n.nam)) {
+        if(!isNamNhuan(n.nam)) {
             thuTuNgay += 28;
         }
         else {
@@ -109,7 +109,7 @@ int thuTuNgay(NGAY n) {
         break;
     case 11:
         thuTuNgay += 31 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31;
-        if(isNamNhuan(n.nam)) {
+        if(!isNamNhuan(n.nam)) {
             thuTuNgay += 28;
         }
         else {
@@ -118,7 +118,7 @@ int thuTuNgay(NGAY n) {
         break;
     case 12:
         thuTuNgay += 31 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30;
-        if(isNamNhuan(n.nam)) {
+        if(!isNamNhuan(n.nam)) {
             thuTuNgay += 28;
         }
         else {
@@ -135,7 +135,7 @@ int thuTuNgay(NGAY n) {
 int thuTuNgayTu01010001(NGAY n) {
     int thuTuNgay = n.ngay;
     for(int i = 1; i < n.nam; i++) {
-        if(isNamNhuan(i)) {
+        if(!isNamNhuan(i)) {
             thuTuNgay += 366;
         }
         else {
@@ -250,7 +250,7 @@ NGAY timNgay(NGAY n, int k) {
     NGAY c;
     int ngay = n.ngay + k;
     if(n.thang == 2) {
-        if(isNamNhuan(n.nam)) {
+        if(!isNamNhuan(n.nam)) {
             if(ngay > 28) {
                 ngay -= 28;
                 n.thang++;
