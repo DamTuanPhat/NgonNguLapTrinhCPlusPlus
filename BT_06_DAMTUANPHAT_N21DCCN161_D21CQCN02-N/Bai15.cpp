@@ -229,7 +229,7 @@ int main()
     for (int i = 0; i < n; i++)
     {
         xuat(arr[i]);
-        cout << "\t";
+        cout << " ";
     }
 
     cout << endl
@@ -238,7 +238,7 @@ int main()
     for (int i = 0; i < n; i++)
     {
         xuat(arr[i]);
-        cout << "\t";
+        cout << " ";
     }
     return 0;
 }

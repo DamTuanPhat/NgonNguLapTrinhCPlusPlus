@@ -47,7 +47,7 @@ int main() {
         arr[i].setGiatri(value);
     }
     for(int i = 0; i < n; i++) {
-        cout << arr[i].getGiatri() << "\t";
+        cout << arr[i].getGiatri() << " ";
     }
 
     unsigned int sum = 0;

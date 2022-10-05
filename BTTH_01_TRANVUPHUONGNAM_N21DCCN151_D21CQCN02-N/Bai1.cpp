@@ -1,10 +1,20 @@
 /*
-Ho ten: Dam Tuan Phat
-MSSV: N21DCCN161
+Ho ten: Tran Vu Phuong Nam
+MSSV: N21DCCN151
 Lop: D21CQCN02-N
 */
-#include<iostream>
-#include <algorithm> 
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <numeric>
+#include <map>
+#include <iomanip>
+#include <set>
 
 using namespace std;
 

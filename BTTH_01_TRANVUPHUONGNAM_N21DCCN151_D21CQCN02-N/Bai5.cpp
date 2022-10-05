@@ -1,12 +1,21 @@
-#include<iostream>
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <numeric>
+#include <map>
+#include <iomanip>
+#include <set>
 
 using namespace std;
 
-
-
 int main() {
     int length = 10;
-    int a[length];
+    int a[1000];
 
     for(int i = 0; i < length; i++) {
         cout << "Nhap gia tri phan tu thu " << i << " : ";
