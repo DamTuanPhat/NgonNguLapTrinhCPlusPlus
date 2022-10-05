@@ -4,12 +4,13 @@ MSSV: N21DCCN161
 Lop: D21CQCN02-N
 */
 
-#include<iostream>
-#include<fstream>
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
-string fileName() {
+string fileName()
+{
     cin.ignore();
     string str;
     cout << "Nhap ten file: ";
@@ -18,10 +19,12 @@ string fileName() {
     return str + ".txt";
 }
 
-void createFile() {
+void createFile()
+{
     fstream outFile;
     outFile.open(fileName(), ios::out);
-    if(!outFile) {
+    if (!outFile)
+    {
         cerr << "File could not be opened." << endl;
         exit(1);
     }
@@ -33,15 +36,18 @@ void createFile() {
     outFile.close();
 }
 
-void readFile() {
+void readFile()
+{
     fstream dataFile;
     dataFile.open(fileName(), ios::in);
-    if(!dataFile) {
+    if (!dataFile)
+    {
         cerr << "File could not be opened." << endl;
         exit(1);
     }
 
-    if(dataFile.is_open()) {
+    if (dataFile.is_open())
+    {
         // cout << "Opened successfully!" << endl;
     }
     cout << "Noi dung cua file: " << endl;
@@ -54,41 +60,50 @@ void readFile() {
     }
 }
 
-void updateFile() {
+void updateFile()
+{
     fstream file;
     string str = "";
     string content;
     file.open(fileName(), ios::app);
-    if(!file) {
+    if (!file)
+    {
         cerr << "File could not be opened." << endl;
         exit(1);
     }
     cout << "Nhap noi dung ghi noi: ";
     cin.ignore();
     getline(cin, content);
-    file << content << endl;
-    if(file.fail()) {
+    file.seekg(0, ios::cur);
+    file << endl;
+    file << content;
+    if (file.fail())
+    {
         cout << "Khong the ghi noi";
     }
     file.close();
 }
 
-void countChars() {
+void countChars()
+{
     int count = 0;
     fstream file;
     string str;
     string content;
     char c;
-    
+
     file.open(fileName(), ios::in);
-    while(!file.eof()) {
+    while (!file.eof())
+    {
         getline(file, content);
         str += content;
     }
     cout << "Nhap ki tu can tim: ";
     cin >> c;
-    for(int i = 0; i < str.size(); i++) {
-        if(c == str[i]) {
+    for (int i = 0; i < str.size(); i++)
+    {
+        if (c == str[i])
+        {
             count++;
         }
     }
@@ -96,9 +111,11 @@ void countChars() {
     cout << count << endl;
 }
 
-int main() {
+int main()
+{
     int n;
-    do {
+    do
+    {
         cout << "\n\n------------------------------";
         cout << " Chuong trinh thao tac voi file ";
         cout << "------------------------------" << endl;
@@ -109,7 +126,7 @@ int main() {
         cout << "0. Thoat chuong trinh" << endl;
         cout << "Ban chon? : ";
         cin >> n;
-        
+
         switch (n)
         {
         case 1:
@@ -128,8 +145,7 @@ int main() {
             break;
         }
 
-
-    } while(!(n > 0 && n <= 4));    
+    } while (!(n > 0 && n <= 4));
 
     return 0;
 }

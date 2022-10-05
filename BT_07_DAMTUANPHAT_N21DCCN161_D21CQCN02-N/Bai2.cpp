@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstring>
 
 using namespace std;
 
@@ -36,7 +37,7 @@ void maHoa()
     string outputFileName = inputFileName + "_Encrypted";
     string extension = ".txt";
 
-    if (inputFileName.find("_Encrypted"))
+    if (!inputFileName.find("_Encrypted"))
     {
         cout << "File da duoc ma hoa" << endl;
     }
@@ -84,54 +85,38 @@ void maHoa()
 void giaiMa()
 {
     fstream inputFile;
-    fstream outputFile;
     string inputFileName = fileName();
-    string outputFileName = inputFileName + "_Decrypted";
     string extension = ".txt";
 
-    if (!inputFileName.find("_Encrypted"))
+    inputFile.open(inputFileName + extension, ios::in);
+
+    if (inputFile.fail() )
     {
-        cout << "File chua duoc ma hoa" << endl;
+        cerr << "An error occured!" << endl;
     }
-    else
+
+    string inputContent = "";
+    while (!inputFile.eof())
     {
-
-        inputFile.open(inputFileName + extension, ios::in);
-        outputFile.open(outputFileName + extension, ios::out);
-
-        if (inputFile.fail() && outputFile.fail())
-        {
-            cerr << "An error occured!" << endl;
-        }
-
-        string inputContent = "";
-        while (!inputFile.eof())
-        {
-            string str;
-            getline(inputFile, str);
-            inputContent += str + "\n";
-        }
-
-        for (int i = 0; i < inputContent.size(); i++)
-        {
-            if (inputContent[i] >= 65 && inputContent[i] <= 85 || inputContent[i] >= 97 && inputContent[i] <= 117)
-            {
-                inputContent[i] += 5;
-            }
-            else if (inputContent[i] > 85 && inputContent[i] <= 90 || inputContent[i] > 97 && inputContent[i] <= 122)
-            {
-                inputContent[i] = inputContent[i] - 21;
-            }
-        }
-
-        outputFile << inputContent;
-        if (inputFile.fail() || outputFile.fail())
-        {
-            cerr << "An error occured!" << endl;
-        }
-        outputFile.close();
-        inputFile.close();
+        string str;
+        getline(inputFile, str);
+        inputContent += str + "\n";
     }
+
+    for (int i = 0; i < inputContent.size(); i++)
+    {
+        if (inputContent[i] >= 70 && inputContent[i] <= 90 || inputContent[i] >= 102 && inputContent[i] <= 122)
+        {
+            inputContent[i] -= 5;
+        }
+        else if (inputContent[i] > 64 && inputContent[i] <= 90 || inputContent[i] > 96 && inputContent[i] <= 122)
+        {
+            inputContent[i] += 21;
+        }
+    }
+
+    cout << inputContent;
+    inputFile.close();
 }
 
 int main()
