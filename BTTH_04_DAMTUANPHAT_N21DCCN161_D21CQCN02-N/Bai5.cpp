@@ -44,12 +44,22 @@ int main() {
         arr[i].setCanhday(b);
     }
 
+    float dienTich = 0;
+    int index = 0;
+
     for(int i = 0; i < n; i++) {
         cout << "Thong tin tam giac thu " << i+1 << endl;
         cout << "Chieu cao: " << arr[i].getChieucao() << endl;
         cout << "Canh day: " << arr[i].getCanhday() << endl;
         cout << "Dien tich: " << arr[i].dientich() << endl << endl;
+        
+        if(dienTich < arr[i].dientich()) {
+            dienTich = arr[i].dientich();
+            index = i;
+        }
     }
+
+    cout << "Tam giac co dien tich lon nhat la tam giac co chieu cao: " << arr[index].getChieucao() << " va canh day: " << arr[index].getCanhday() << endl;
 
 
 
