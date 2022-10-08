@@ -37,6 +37,6 @@ int main() {
     cout << endl << n << " ki tu cuoi cua chuoi la: " << endl;
     xtrnend(s, n);
     cout << endl << "Ki tu tu vi tri thu k cua chuoi la: " << endl;
-    xtrnpos(s, k-1u); 
+    xtrnpos(s, k-1); 
     return 0;
 }
